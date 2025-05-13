@@ -42,7 +42,7 @@ function Sidebar() {
         
         <div className="footer-links">
           <a 
-            href="https://github.com/your-username/hooksy" 
+            href="https://github.com/notnibloo/hooksy" 
             target="_blank" 
             rel="noopener noreferrer"
             className="footer-link-item"
