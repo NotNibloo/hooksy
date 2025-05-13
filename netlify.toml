@@ -6,6 +6,11 @@
 [[plugins]]
   package = "@netlify/plugin-functions-install-core"
 
+# Handle function bundling for dependencies
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = ["axios"]
+
 # Redirect rule for SPA - ensures all routes return the index.html
 [[redirects]]
   from = "/*"

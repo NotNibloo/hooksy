@@ -4,6 +4,7 @@ import express from 'express';
 import cors from 'cors';
 import axios from 'axios';
 import dotenv from 'dotenv';
+import { process } from 'node:process';
 
 dotenv.config();
 
@@ -17,8 +18,8 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(express.json());
 
-// API endpoint for sending Discord webhook
-app.post('/api/send-webhook', async (req, res) => {
+// API endpoint for sending Discord webhook - using the same path as Netlify functions
+app.post('/api/webhook', async (req, res) => {
   try {
     const { webhookUrl, jsonPayload } = req.body;
     
@@ -47,6 +48,12 @@ app.post('/api/send-webhook', async (req, res) => {
       error: error.message
     });
   }
+});
+
+// For backward compatibility, keep the old endpoint
+app.post('/api/send-webhook', (req, res) => {
+  // Redirect to the new endpoint
+  app.post('/api/webhook', req, res);
 });
 
 // In production, serve the static files from the build directory

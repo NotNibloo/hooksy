@@ -5,13 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
+    "build": "vite build && npm run functions:install",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "server": "node server.js",
     "start": "node server.js",
     "netlify:dev": "netlify dev",
-    "netlify:build": "npm run build && cp netlify/functions/package.json dist/package.json"
+    "netlify:build": "npm run build && cp netlify/functions/package.json dist/package.json",
+    "functions:install": "cd netlify/functions && npm install"
   },
   "dependencies": {
     "axios": "^1.9.0",
