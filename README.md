@@ -1,7 +1,7 @@
 # Hooksy
 
 <div align="center">
-  <img src="public/logo.svg" alt="Hooksy Logo" width="120" height="120">
+  <img src="public/hooksy-icon.svg" alt="Hooksy Logo" width="120" height="120">
   <p>elegant way to send discord webhooks</p>
   <a href="https://hooksy.xyz">hooksy.app</a>
   
