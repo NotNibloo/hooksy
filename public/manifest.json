@@ -1,0 +1,16 @@
+{
+  "name": "Hooksy - Discord Webhook Sender",
+  "short_name": "Hooksy",
+  "description": "A sleek, dark monochrome application for sending custom Discord webhook messages",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "hooksy-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+} 

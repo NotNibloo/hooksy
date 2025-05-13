@@ -1,0 +1,9 @@
+{
+  "name": "hooksy-netlify-functions",
+  "version": "1.0.0",
+  "description": "Serverless functions for Hooksy Discord webhook sender",
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.9.0"
+  }
+} 
